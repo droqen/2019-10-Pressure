@@ -25,7 +25,7 @@
         abstract public void SpawnTileId(int TileId, Vector3Int TilePos);
 
         protected Dictionary<string, EntityLot> entlots = new Dictionary<string, EntityLot>();
-        protected EntityLot GetEntLot(string entLotName)
+        public EntityLot GetEntLot(string entLotName)
         {
             if (!entlots.ContainsKey(entLotName)) entlots.Add(entLotName, EntityLot.NewEntLot(entLotName));
             return entlots[entLotName];
